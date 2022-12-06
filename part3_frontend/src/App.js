@@ -67,7 +67,7 @@ const App = () => {
             numberService
                 .deleteNumber(deletedPerson.id)
                 .catch(() => {
-                    setError(`Information of ${deletedPerson.name} has already been removed from the server`)
+                    setError(`Information of ${deletedPerson.name} has already been removed from the server.`)
                     setTimeout(() => {
                         setError(null)
                     }, 2000)

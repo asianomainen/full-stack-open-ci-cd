@@ -28,7 +28,7 @@ jobs:
         run: npm run build:ui
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
-        
+
   tag_release:
     if: ${{ github.event_name == 'push' && !contains(join(toJson(github.event.commits.*.message), ' '), '#skip') }}
     needs: [ simple_deployment_pipeline ]
